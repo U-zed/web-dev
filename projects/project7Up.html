@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="Fontawesome/css/all.css" />
+  </head>
+  <body>
+    <!-- navbar section  -->
+    <nav
+      class="flex flex-row justify-between items-center border-b border-white bg-[#f79a83] h-[70px] lg:h-[110px] w-[100%] fixed z-50 top-0 pr-[53px]"
+    >
+      <img
+        src="images/7up-logo-large.png"
+        alt="7up logo"
+        class="m-6 w-fit h-[73%] cursor-pointer"
+      />      
+      
+      <div
+        class="w-[560px] h-[54px] flex flex-row items-center justify-between "
+      >
+        <!-- nav links -->
+        <ul
+          class="hidden lg:flex flex-row justify-between mr-8 cursor-pointer gap-10"
+        >
+          <li>
+            <a
+              href="https://www.7up.com/en/products"
+              class="font-[500] text-[20px] text-white font-[ Nobel, Helvetica, Arial, sans-serif]  hover:underline"
+              >PRODUCTS</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.7up.com/en/recipes"
+              class="font-[500] text-[20px] text-white font-[ Nobel, Helvetica, Arial, sans-serif]  hover:underline"
+              >RECIPES</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.7up.com/en/stores"
+              class="font-[500] text-[20px] text-white font-[ Nobel, Helvetica, Arial, sans-serif]  hover:underline"
+              >STORES</a
+            >
+          </li>
+        </ul>
+        <!-- nav icons  -->
+        <div
+          class="hidden lg:flex flex-row justify-between h-[50%] gap-1 cursor-pointer"
+        >
+          <img src="/images/fb.png" alt="fb" />
+          <img src="/images/ig.png" alt="ig" />
+          <img src="images/tiktok.png" alt="tiktok" />
+          <img src="images/x.png" alt="x" />
+          <img src="images/youtube.png" alt="youtube" />
+          <img src="images/pinterest.png" alt="pinterest" />
+        </div>
+      </div>
+      <!-- bar code  -->
+      <i class="fa-solid fa-bars fa-2xl text-white lg:hidden"></i>
+    </nav>
+    <!-- body section  -->
+    <section class="mt-[70px] lg:mt-[110px]">
+      <!-- first body section (see recipes) -->
+      <div class="relative h-[100dvh] w-[100%] z-40">
+        <img
+          src="images/imagepc.png"
+          alt=""
+          class="hidden lg:block h-[100%] w-[100%] absolute top-0 z-40"
+        />
+        <!-- mobile view  -->
+         <img src="images/mobile.png" alt="" class="lg:hidden absolute top-0 z-40 h-[100dvh] w-[100%]">
+       
+         <div class="flex flex-col items-center justify-center text-center lg:text-left   lg:block w-[50%] lg:w-[40%] h-fit absolute left-1/2 lg:transform -translate-x-1/2 bottom-0 lg:bottom-[120px] lg:left-[27%] z-40 ">
+          <h1 class="uppercase text-white font-[800] leading-[50px] lg:leading-[80px] text-[45px] lg:text-[4.9vw] lg:pb-[55px]">
+            season's sweetings </h1>
+          <button
+            class="w-fit px-7 py-1 border-2 border-white rounded-full text-white text-center text-[13px] lg:text-[20px] font-[700] my-5 lg:mx-0"
+          >
+            <a href="https://www.7up.com/images/simple-7up/image3.png">
+              See Recipes</a
+            >
+          </button>
+        </div>
+      </div>
+      <!-- second (strewberry part) -->
+      <div class="w-[100%] h-[100dvh] block relative top-0 z-30">
+        <img
+          src="images/image2.png"
+          alt=""
+          class="absolute top-0 z-30 h-[100%] w-[100%]"
+        />
+        <!-- center the div using transform translate property and bg-opacity to make it transparent -->
+        <div
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 bg-[#0a5b2b] bg-opacity-90 rounded-full w-[95%] lg:w-[47%] pt-0 lg:pb-[35px] text-center"
+        >
+          <h1
+            class="uppercase text-[25px] lg:text-[33px] text-white font-[500] py-[10px] text-center"
+          >
+            Recipes
+          </h1>
+          <p
+            class="pb-[20px] px-3 font-[ Nobel, Helvetica, Arial, sans-serif] text-center text-white font-[500] text-[15px] lg:text-[18px]"
+          >
+            Bake, shake, and stir some uptimilg into your day.
+          </p>
+          <button
+            class="bg-transparent text-white lg:text-[19px] font-bold font-[ Nobel, Helvetica, Arial, sans-serif] px-7 lg:px-10 py-0 lg:py-1 border-2 border-white rounded-full mb-3"
+          >
+            <a href="https://www.7up.com/images/simple-7up/image2.png">
+              View Recipes</a
+            >
+          </button>
+        </div>
+      </div>
+      <!-- third (green part) -->
+      <div class="w-[100%] h-[100dvh] block relative top-0 z-20">
+        <img
+          src="images/image3.png"
+          alt=""
+          class="absolute top-0 z-20 h-[100%] w-[100%]"
+        />
+
+        <!-- center the div using transform translate property and bg-opacity to make it transparent -->
+        <div
+        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 bg-[#0a5b2b] bg-opacity-90 rounded-full w-[95%] lg:w-[47%] pt-0 lg:pb-[35px] text-center"
+      >
+      <h1
+      class="uppercase text-[25px] lg:text-[33px] text-white font-[500] py-[10px] text-center"
+    >
+            Store Locator
+          </h1>
+          <p
+          class="pb-[20px] px-3 font-[ Nobel, Helvetica, Arial, sans-serif] text-center text-white font-[500] text-[15px] lg:text-[18px]"
+        >
+            Find your favorite flavors of uptimilg and keep your glass
+            half-full.
+            </p>
+            <button
+            class="bg-transparent text-white lg:text-[19px] font-bold font-[ Nobel, Helvetica, Arial, sans-serif] px-7 lg:px-10 py-0 lg:py-1 border-2 border-white rounded-full my-3"
+          >
+            <a href="https://www.7up.com/images/simple-7up/image1.png">
+              Find Products</a
+            >
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- footer section  -->
+    <footer class="flex flex-col items-center bg-[#3e3e3e] h-auto lg:h-[150px] w-[100%] text-center text-white p-6">
+      <ul class="w-[80%]  lg:w-[68%] grid grid-cols-2 lg:flex lg:flex-row justify-between "> 
+        <li class=" text-[12px] font-[500] hover:underline"><a href="https://www.7up.com/en/products#">Privacy Policy</a></li>
+        <li class=" text-[12px] font-[500] hover:underline"><a href="https://www.keurig.com/content/privacy-policy#heading_6">CA Privacy Rights</a></li>
+        <li class=" text-[12px] font-[500] hover:underline"><a href="https://www.7up.com/en/products#">Do Not Sell or Share My Personal Information</a></li>
+        <li class=" text-[12px] font-[500] hover:underline"><a href="https://www.7up.com/en/products#">Terms of Use</a></li>
+        <li class=" text-[12px] font-[500] hover:underline"><a href="http://www.drpeppersnapplegroup.com/accessibility/">Accessibility</a></li>
+        <li class=" text-[12px] font-[500] hover:underline"><a href="https://support.keurigdrpepper.com/email-us">Contact</a></li>
+        <li class=" text-[12px] font-[500] hover:underline"><a href="https://support.keurigdrpepper.com/">FAQ</a></li>
+        <li class=" text-[12px] font-[500] hover:underline"><a href="https://careers.keurigdrpepper.com/">Careers</a></li>
+      </ul>
+      <p class=" text-[11px] font-[600] py-4">7UP and BE UPTIMISTIC are trademarks of Dr Pepper/Seven Up, Inc. © 2024 Dr Pepper/Seven Up, Inc.</p>
+
+    </footer>
+  </body>
+</html>

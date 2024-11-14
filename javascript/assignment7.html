@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="Fontawesome/css/all.css" />
+</head>
+<body>
+    <section class="border-2 border-gray-400 h-[450px] w-[300px] mx-auto my-20 p-1 rounded-md">
+        <div class="flex flex-col justify-between items-center bg-gray-400 h-full w-full rounded-md">
+            <div class="flex items-center h-[25%] w-full">
+                <input id="display" type="text" readonly class="bg-white h-[65px] w-[85%] mx-auto rounded-xl outline-none text-right font-bold text-2xl px-3" value="">
+            </div>
+            <hr>
+            <div class="grid grid-cols-4 gap-3 p-2 h-[75%] w-full">
+                <button onclick="appendValue('7')" class="button flex items-center justify-center cursor-pointer hover:opacity-50 text-blue-800 rounded-md h-16 text-3xl  font-bold shadow">7</button>
+                <button onclick="appendValue('8')" class="button flex items-center justify-center cursor-pointer hover:opacity-50 text-blue-800 rounded-md h-16 text-3xl  font-bold shadow">8</button>
+                <button onclick="appendValue('9')" class="button flex items-center justify-center cursor-pointer hover:opacity-50 text-blue-800 rounded-md h-16 text-3xl  font-bold shadow">9</button>
+                <button onclick="appendValue('*')" class="button flex items-center justify-center cursor-pointer hover:opacity-50 text-red-800 rounded-md h-16 text-3xl  font-bold shadow">*</button>
+                <button onclick="appendValue('4')" class="button flex items-center justify-center cursor-pointer hover:opacity-50 text-blue-800 rounded-md h-16 text-3xl  font-bold shadow">4</button>
+                <button onclick="appendValue('5')" class="button flex items-center justify-center cursor-pointer hover:opacity-50 text-blue-800 rounded-md h-16 text-3xl  font-bold shadow">5</button>
+                <button onclick="appendValue('6')" class="button flex items-center justify-center cursor-pointer hover:opacity-50 text-blue-800 rounded-md h-16 text-3xl  font-bold shadow">6</button>
+                <button onclick="appendValue('-')" class="button flex items-center justify-center cursor-pointer hover:opacity-50 text-red-800 rounded-md h-16 text-3xl  font-bold shadow">-</button>
+                <button onclick="appendValue('1')" class="button flex items-center justify-center cursor-pointer hover:opacity-50 text-blue-800 rounded-md h-16 text-3xl  font-bold shadow">1</button>
+                <button onclick="appendValue('2')" class="button flex items-center justify-center cursor-pointer hover:opacity-50 text-blue-800 rounded-md h-16 text-3xl  font-bold shadow">2</button>
+                <button onclick="appendValue('3')" class="button flex items-center justify-center cursor-pointer hover:opacity-50 text-blue-800 rounded-md h-16 text-3xl  font-bold shadow">3</button>
+                <button onclick="appendValue('+')" class="button flex items-center justify-center cursor-pointer hover:opacity-50 text-red-800 rounded-md h-16 text-3xl  font-bold shadow">+</button>
+                <button onclick="clearDisplay( )" class="button flex items-center justify-center cursor-pointer hover:opacity-50 text-red-800 rounded-md h-16 text-xl  font-bold shadow">AC</button>
+                <button onclick="appendValue('0')" class="button flex items-center justify-center cursor-pointer hover:opacity-50 text-blue-800 rounded-md h-16 text-3xl  font-bold shadow">0</button>
+                <button onclick="appendValue('.')" class="button flex items-center justify-center cursor-pointer hover:opacity-50 text-red-800 rounded-md h-16 text-3xl  font-bold shadow">.</button>
+                <button onclick="calculateResult()" class="button flex items-center justify-center cursor-pointer hover:opacity-50 text-red-800 rounded-md h-16 text-3xl  font-bold shadow">=</button>
+            </div>
+        </div>
+    </section>
+
+    
+<script>
+   // Function to append values to the input
+function appendValue(value) {
+    const display = document.getElementById('display');
+    const currentValue = display.value;
+
+    // Check if the value being added is an operator
+    if (['+', '-', '*', '.'].includes(value)) {
+        // Don't allow consecutive operators
+        const lastChar = currentValue.slice(-1);
+        if (['+', '-', '*', '.'].includes(lastChar)) {
+            return; // Prevent adding the operator
+        }
+    }
+
+    // Append value if no consecutive operator
+    display.value += value;
+}
+
+// Function to clear the input display
+function clearDisplay() {
+    document.getElementById('display').value = '';
+}
+
+// Function to calculate the result using an API
+async function calculateResult() {
+    const display = document.getElementById('display');
+    let expression = display.value;
+
+    // Check if the expression is empty
+    if (!expression) {
+        return; // Exit if there’s no input
+    }
+
+    // Remove any trailing operator to prevent invalid expressions
+    if (['+', '-', '*', '.'].includes(expression.slice(-1))) {
+        expression = expression.slice(0, -1);
+    }
+
+    // Define the calculator API URL
+    const apiUrl = `https://api.mathjs.org/v4/?expr=${encodeURIComponent(expression)}`;
+
+    try {
+        const response = await fetch(apiUrl);
+        const result = await response.text();
+        display.value = result;
+    } catch (error) {
+        display.value = 'Error';
+    }
+}
+ </script>
+</body>
+</html>

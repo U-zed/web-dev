@@ -1,0 +1,65 @@
+div {
+    text-align: center;
+  border: 2px solid black;
+  margin: 2px;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.none {
+  display: none;
+}
+.static {
+  background-color: red;
+  position: static;
+}
+.sticky {
+  position: sticky;
+  top: 26px;
+  width: 100%;
+  z-index: 9;
+  background-color: darkorange;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: dodgerblue;
+  width: 100%;
+}
+.relative {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  background-color: darkblue;
+  margin: 0 auto;
+}
+.absolute {
+  position: absolute;
+  background-color: green;
+  bottom: 0;
+}
+
+.one {
+    height: 100vh;
+    background-image: url("/images/pictures.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  /* .one {
+    height: 100vh;
+    background-image:  linear-gradient(to bottom right, rgba(36, 33, 33, 0.37), rgba(165, 165, 179, 0.078), rgba(55, 62, 55, 0.292));
+  } */
+  .overlay{
+    background-color:  rgb(56, 32, 8);
+    background-image:  linear-gradient(to bottom right, rgba(0, 0, 0, 0.5);
+  }

@@ -1,0 +1,15 @@
+p {
+    background-color: blue;
+    color: white;
+  }
+  h2{
+    color: rgba(255, 0, 0, 0.6);
+  }
+  div{
+    border: 5px solid  #000;
+    border-radius: 50%  0px;
+    width: 200px;
+    height: 200px;
+    margin: 40px 50px 200px 30px;
+    padding: 50px 30px;
+  }

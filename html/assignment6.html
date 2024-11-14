@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: lavender;
+        width: 100%;
+        height: 50px;
+        box-shadow: 2px 1px 5px grey;
+      }
+      nav img {
+        height: 90%;
+        width: 45px;
+        margin: 0px 10px;
+        border-radius: 50%;
+      }
+      .barContainer div {
+        margin: 3px 20px;
+        width: 17px;
+        height: 3px;
+        background-color: black;
+      }
+      .barContainer a {
+        padding-right: 10px;
+      }
+      .general {
+        height: 100vh;
+        width: 100%;
+      }
+      .links {
+      }
+      a {
+        text-decoration: 0;
+        color: black;
+        font-weight: bold;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+      }
+      a:hover {
+        color: blue;
+        transition: 0.4s;
+      }
+      @media (min-width: 425px) {
+        nav {
+          background-color: white;
+        }
+        .barContainer div {
+          display: none;
+        }
+        .links {
+          display: flex;
+          flex-direction: row;
+          width: 190px;
+          justify-content: space-between;
+          color: black;
+        }
+      }
+      @media (max-width: 425px) {
+        a {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <img src="/images/fcc-removebg-preview.png" alt="pochi logo" />
+      <div class="links">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+      </div>
+      <div class="barContainer">
+        <div></div>
+        <div></div>
+        <div></div>
+        <a href="">Sign in</a>
+      </div>
+    </nav>
+
+    <div class="general"></div>
+  </body>
+</html>

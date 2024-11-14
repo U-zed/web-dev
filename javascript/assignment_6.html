@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dictionary api</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    .partOfSpeech {
+      font-weight: bold;
+      color: #01216a;
+    }
+    
+  </style>
+</head>
+<body class="max-w-[600px] mx-auto my-[20px] py-[20px]">
+
+  <h1 class="font-medium pb-3 text-center">Dictionary API</h1>
+  
+  <form class="mx-auto w-1/2 flex flex-col gap-5 searchForm">
+    <input type="text" name="word" required placeholder="Enter a word" class="word border outline-0 rounded-lg py-1 px-2">
+    <button type="submit" class="bg-[#01216a] text-sm w-fit mx-auto text-white font-medium rounded py-1 px-4">Search</button>
+  </form>
+  
+  <div class="flex flex-col w-[80%] mx-auto result">
+    <p class="font-bold text-[1.5em] my-[10px] text-[#3e5055] wordDisplay"></p>
+    <p class="transcription text-lg"></p>
+    <div class="meanings text-sm ml-[10px]"></div>
+  </div>
+
+
+<script src="assignment_6.js"></script>
+</body>
+</html>
